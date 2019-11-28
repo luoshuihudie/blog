@@ -14,6 +14,7 @@
         "laravel/tinker": "^1.0",
         "maatwebsite/excel": "^3.1",
         "predis/predis": "^1.1",
+        "squizlabs/php_codesniffer": "^3.5",
         "wayne/guard": "dev-master"
     },
     "require-dev": {
@@ -53,6 +54,9 @@
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi"
+        ],
+        "post-install-cmd": [
+            "cp -R hooks ./.hooks"
         ],
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
