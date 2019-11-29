@@ -47,6 +47,6 @@ class HomeController extends Controller
     }
     public function home()
     {
-        return 'home';
+        return 'home Blog';
     }
 }
